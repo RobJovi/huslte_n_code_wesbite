@@ -1,0 +1,412 @@
+<div class="content">
+  <div class="carousel-class">
+    <div class="slide">
+      <div class="slide-content">
+        <h2 class="title-animate title-1 reset white" [ngClass]="{'title-animate-go': slides0[0]}"><span>Tech Entrepreneur </span>
+          <span>in South Central L.A.</span>
+        </h2>
+        <h5 class="title-animate title-2 reset white" [ngClass]="{'title-animate-go': slides0[1]}">
+          <span>Recently we were featured in an article on the California Health Report</span>
+        </h5>
+        <hr class="title-seperator title-animate title-3 reset" [ngClass]="{'title-animate-go': slides0[2]}">
+        <span style="text-align:center" class="title-animate title-4 reset" [ngClass]="{'title-animate-go': slides0[3]}">
+                    <a href="#" class="article-btn btn-white">Read Full Article</a>
+                </span>
+      </div>
+    </div>
+    <div class="slide">
+      <div class="slide-content">
+        <h2 class="title-animate title-1 reset white" [ngClass]="{'title-animate-go': slides1[0]}"><span>TXT hosts Tech </span>
+          <span>talks in South L.A.</span>
+        </h2>
+        <h5 class="title-animate title-2 reset white" [ngClass]="{'title-animate-go': slides1[1]}">
+          <span>Recently we held a Tech Talk on cryptocurrency</span>
+        </h5>
+        <hr class="title-seperator title-animate title-3 reset" [ngClass]="{'title-animate-go': slides1[2]}">
+        <span style="text-align:center" class="title-animate title-4 reset" [ngClass]="{'title-animate-go': slides1[3]}">
+                    <a href="#" class="article-btn btn-white">Read Full Article</a>
+                </span>
+      </div>
+    </div>
+  </div>
+  <div id="about-us" class="content-section">
+    <ul class="noselect">
+      <li [ngClass]="{'about-us-active': links[0]}" (click)="aboutUsContentChange(0)" class="noselect">About Us</li>
+      <li [ngClass]="{'about-us-active': links[1]}" (click)="aboutUsContentChange(1)" class="noselect">Our Story</li>
+      <li [ngClass]="{'about-us-active': links[2]}" (click)="aboutUsContentChange(2)" class="noselect">Our Mission</li>
+      <li [ngClass]="{'about-us-active': links[3]}" (click)="aboutUsContentChange(3)" class="noselect">Our Team</li>
+    </ul>
+    <div id="about-us-content" [@flyInOut]="currentState[0]">
+      <div class="columns">
+        <div class="column">
+          <img src="assets/about-us/about-us-1.jpeg" alt="">
+        </div>
+        <div class="column">
+          <p>We serve young men of color between the 7th and 11th grade who are from low income communities. Since 2009, we’ve
+            used the concept of developing strong teams as a way for our young men to learn about collaboration, ideation,
+            and long-lasting life skills. In small teams our youths learn the process of taking an idea from concept to market.</p>
+          <p>We use coding as the catalyst that can take young men of color and turn them into technology leaders who build
+            positive communities. To us, computer programming is the tool that helps our teens learn how to learn, to develop
+            discipline, and to build confidence.</p>
+        </div>
+      </div>
+    </div>
+    <div id="our-story-content" [@flyInOut]="currentState[1]">
+      <div class="columns columns-padding">
+        <div class="column">
+          <img src="assets/about-us/our-story-1.jpeg" alt="">
+        </div>
+        <div class="column">
+          <p>Teens Exploring Technology (TXT) was founded by Oscar Menjivar, a graduate of Jordan High School, in 2008. Growing
+            up in Watts, California, Oscar lost friends to drugs, crime, and prison. He thanks his mentor and lacrosse coach,
+            Mr. Wonders, for helping him to stay on track and encouraging him to pursue higher education. Oscar ultimately
+            received an undergraduate degree in computer science from Cal Poly Pomona and a Master’s degree in Educational
+            Technology from Pepperdine University.</p>
+          <p>Teens Exploring Technology was created because many of Oscar’s adolescent experiences connected with his vision
+            to empower teens from similar communities as his . As a kid Oscar had a passion for technology, so he enrolled
+            in the only tech class offered in his school, which turned out to be a glorified typing class. Even though his
+            school didn’t offer any relevant opportunities in tech, Oscar pursued his love for technology through higher
+            education.</p>
+        </div>
+      </div>
+      <div class="columns columns-padding">
+        <div class="column">
+          <p>A decade after graduating, Oscar was invited to speak with the students of Jordan High School. He was shocked to
+            learn that the school’s tech curriculum had not changed since his time as a student. Teens in his school still
+            lacked opportunities to make them competitive in the marketplace. He knew it was time to create a program that
+            would allow others in his community and similar ones to compete in the 21st century.</p>
+          <p>While working in the classroom as a teacher and also working with schools and organizations as an educational technology
+            professional, he noticed an upsetting trend. Young men of color in South Los Angeles were failing classes and
+            dropping out of high school at alarming rates. Through research, he confirmed that 55% of males drop out of school
+            in his community, which translates into high incarceration, unemployment, and death rates for African Americans
+            and Latinos.</p>
+        </div>
+        <div class="column">
+          <img src="assets/about-us/our-story-2.jpeg" alt="">
+        </div>
+      </div>
+    </div>
+    <div id="our-mission-content" [@flyInOut]="currentState[2]">
+      <div class="columns columns-padding">
+        <div class="column">
+          <img src="assets/about-us/our-mission.jpeg" alt="">
+        </div>
+        <div class="column">
+          <p>Teens Exploring Technology (TXT) encourages inner city teenage Black and Latino males to become catalysts of change
+            in urban communities. Our approach is to use technology as a tool for promoting positive youth development and
+            leadership, and ultimately paving the pathway to higher education and majors and careers in Science, Technology
+            Engineering, Math (STEM).</p>
+        </div>
+      </div>
+    </div>
+    <div id="our-team-content" [@flyInOut]="currentState[3]">
+      <div class="columns columns-padding row-1">
+        <div class="column">
+          <div class="text">
+            <h1>Oscar Menjivar</h1>
+            <p>Founder and CEO</p>
+          </div>
+          <div class="img-content"></div>
+        </div>
+        <div class="column">
+          <div class="text">
+            <h1>Roxanne Mendez</h1>
+            <p>Board Member and Co-Founder</p>
+          </div>
+          <div class="img-content"></div>
+        </div>
+        <div class="column">
+          <div class="text">
+            <h1>Fredy Torres</h1>
+            <p>Program Manager and Innovator</p>
+          </div>
+          <div class="img-content"></div>
+        </div>
+      </div>
+      <div class="columns columns-padding row-2">
+        <div class="column">
+          <div class="text">
+            <h1>Michael Morales</h1>
+            <p>Development Manager</p>
+          </div>
+          <div class="img-content"></div>
+        </div>
+        <div class="column">
+          <div class="text">
+            <h1>Danny Menjivar</h1>
+            <p>Executive Assistant</p>
+          </div>
+          <div class="img-content"></div>
+        </div>
+        <div class="column">
+          <div class="text" (click)="test()">
+            <h1>Roberto Sanchez</h1>
+            <p>Developer</p>
+          </div>
+          <div class="img-content"></div>
+        </div>
+      </div>
+      <div class="columns columns-padding row-3">
+        <div class="column is-half is-offset-one-quarter">
+          <div class="text">
+            <h1>Bagel</h1>
+            <p>Chief Mascot</p>
+          </div>
+          <div class="img-content"></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!--end about us content -->
+  <div id="programs" class="content-section">
+    <div class="columns row-1 is-multiline">
+      <div class="column is-half-tablet is-half-desktop">
+        <a href="#" [routerLink]="['/programs','SCLA']">
+          <div class="text-program">
+            <h1>Learn more</h1>
+           
+          </div>
+          <div class="program-img"></div>
+          <p>Summer Coding Leadership Academy (SCLA) </p>
+        </a>
+      </div>
+
+      <div class="column is-half-tablet is-half-desktop">
+            <a href="#" [routerLink]="['/programs','seals']">
+              <div class="text-program">
+                <h1>Learn More</h1>
+               
+              </div>
+              <div class="program-img"></div>
+              <p>Seals Program </p>
+            </a>
+          </div>
+          <div class="column is-half-tablet is-half-desktop">
+                <a href="#" [routerLink]="['/programs','leadCs']">
+                  <div class="text-program">
+                    <h1>Learn More</h1>
+                    
+                  </div>
+                  <div class="program-img"></div>
+                  <p>Lead Computer Science (Lead CS) </p>
+                </a>
+              </div>
+              <div class="column is-half-tablet is-half-desktop">
+                    <a href="#" [routerLink]="['/programs','hackathon']">
+                      <div class="text-program">
+                        <h1>Learn more</h1>
+                        
+                      </div>
+                      <div class="program-img"></div>
+                      <p>Hustle N Code Hackathon </p>
+                    </a>
+                  </div>
+    </div>
+
+  </div>
+  <div id="newsletter">
+    <h1>subscribe to our newsletter</h1>
+    <div class="field">
+      <label class="label">Email Address</label>
+      <div class="control">
+        <input class="input" type="email">
+      </div>
+      <p class="control">
+        <button class="button is-success">
+                          submit
+                        </button>
+      </p>
+    </div>
+  </div>
+  <div id="get-invovled">
+    <div class="header">
+      <h1>Get Involved</h1>
+      <hr class="title-seperator-programs">
+
+    </div>
+    <div class="columns">
+      <div class="column is-2 circle-icon">
+        <fa name="heart"></fa>
+      </div>
+      <div class="column text-icon">We are a non-profit organization and every little bit helps. We have made it easy for your to donate to our cause.
+        Please help us keep our program alive by donating any amount.
+        <div class="link"><a class="button is-primary">Donate</a> </div>
+      </div>
+    </div>
+    <div class="columns">
+      <div class="column is-2 circle-icon">
+        <fa name="users"></fa>
+      </div>
+      <div class="column text-icon">Just because you don't know design or programming it does not mean you can't help us organize events, run the program
+        or coordinate meetings and more.
+        <div class="link"><a class="button is-primary">Volunteer</a> </div>
+      </div>
+    </div>
+    <div class="columns">
+      <div class="column is-2 cap circle-icon">
+        <fa name="graduation-cap"></fa>
+      </div>
+      <div class="column text-icon">Are you a passionate professional in the technology industry? You can make a difference in a teen's life by contributing
+        your time and expertise as part of our weekly workshops. Contact us and let us know how you can help.
+        <div class="link"><a class="button is-primary">Mentor</a> </div>
+      </div>
+    </div>
+    <div class="columns">
+      <div class="column is-2 terminal circle-icon">
+        <fa name="terminal"></fa>
+      </div>
+      <div class="column text-icon">As a TXT fellow, you will grow as an individual while inspiring the next generation of tech entrepreneurs to develop
+        solutions for social problems in low-income communities.
+        <div class="link"><a class="button is-primary">Fellowship</a> </div>
+      </div>
+    </div>
+  </div>
+  <div id="contact-us">
+    <h1>contact us</h1>
+    <div class="field is-horizontal">
+      <div class="field-body">
+        <div class="field">
+          <p class="control is-expanded has-icons-left">
+            <input class="input" type="text" placeholder="Full Name">
+            <span class="icon is-small is-left">
+                    <i class="fa fa-user"></i>
+                  </span>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="field is-horizontal">
+      <div class="field-body">
+        <div class="field">
+          <p class="control is-expanded has-icons-left has-icons-right">
+            <input class="input" type="email" placeholder="Email">
+            <span class="icon is-small is-left">
+                        <i class="fa fa-envelope"></i>
+                      </span>
+            <!-- <span class="icon is-small is-right">
+                        <i class="fa fa-check"></i>
+                      </span> -->
+          </p>
+        </div>
+        <div class="field is-expanded">
+          <div class="field">
+            <p class="control is-expanded has-icons-left">
+              <input class="input" type="tel" placeholder="Phone number">
+              <span class="icon is-small is-left">
+                                    <i class="fa fa-phone"></i>
+                            </span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="field is-horizontal">
+      <div class="field-body">
+        <div class="field">
+          <div class="control">
+            <input class="input" type="text" placeholder="Subject - e.g. Partnership opportunity">
+          </div>
+          <!-- <p class="help is-danger">
+                      This field is required
+                    </p> -->
+        </div>
+      </div>
+    </div>
+
+    <div class="field is-horizontal">
+      <div class="field-body">
+        <div class="field">
+          <div class="control">
+            <textarea class="textarea" placeholder="Explain how we can help you"></textarea>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="field is-horizontal">
+      <div class="field-body">
+        <div class="field">
+          <div class="control custom-btn">
+            <button class="button is-primary">
+                    Send
+                  </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- <div id="blog">
+        <div class="header">
+            <h1>From Our Blog</h1>
+            <hr class="title-seperator-programs">
+        </div>
+            <div class="columns is-centered">
+                <div class="column is-3">
+                    <h1 class="blog-title">This is a sample blog title</h1>
+                    <p  class="desc">A brief desceription of the blog. Two to three sentences....</p>
+                    <p  class="author"></p>
+                </div>
+                <div class="column is-3">
+                        <h1 class="blog-title">This is a sample blog title</h1>
+                        <p  class="desc">A brief desceription of the blog. Two to three sentences....</p>
+                        <p  class="author"></p>
+                </div>
+                <div class="column is-3">
+                        <h1 class="blog-title">This is a sample blog title</h1>
+                        <p  class="desc">A brief desceription of the blog. Two to three sentences....</p>
+                        <p  class="author"></p>
+                </div>
+            </div>
+    </div> -->
+  <div id="sponsers">
+    <div class="header">
+      <h1>Meet Our Sponsers</h1>
+      <hr class="title-seperator-programs">
+    </div>
+    <div class="columns is-mobile is-multiline is-centered">
+      <div class="column is-half-mobile">
+        <img src="assets/sponsers/tinder.png" alt="">
+      </div>
+      <div class="column is-half-mobile">
+        <img src="assets/sponsers/snapchat.png" alt="">
+      </div>
+      <div class="column is-half-mobile">
+        <img src="assets/sponsers/google.png" alt="">
+      </div>
+      <div class="column is-half-mobile">
+        <img src="assets/sponsers/honda.png" alt="">
+      </div>
+      <div class="column is-half-mobile">
+        <img src="assets/sponsers/facebook2.png" alt="">
+      </div>
+    </div>
+    <div class="columns is-centered is-multiline is-mobile">
+      <div class="column is-half-mobile">
+        <img src="assets/sponsers/lakers.png" alt="">
+      </div>
+      <div class="column is-half-mobile">
+        <img src="assets/sponsers/usc.png" alt="">
+      </div>
+      <div class="column is-half-mobile">
+        <img src="assets/sponsers/subaru.png" alt="">
+      </div>
+      <div class="column is-half-mobile">
+        <img src="assets/sponsers/verizon.png" alt="">
+      </div>
+      <div class="column is-half-mobile">
+        <img src="assets/sponsers/shave.png" alt="">
+      </div>
+    </div>
+    <div class="columns is-centered is-multiline is-mobile">
+      <div class="column is-2-desktop is-half-mobile">
+        <img src="assets/sponsers/edison.png" alt="">
+      </div>
+      <div class="column is-2-desktop is-half-mobile">
+        <img src="assets/sponsers/good.png" alt="">
+      </div>
+    </div>
+  </div>
+</div>

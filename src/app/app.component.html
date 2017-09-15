@@ -1,20 +1,131 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{title}}!
-  </h1>
-  <img width="300" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOS4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHZpZXdCb3g9IjAgMCAyNTAgMjUwIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAyNTAgMjUwOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPg0KCS5zdDB7ZmlsbDojREQwMDMxO30NCgkuc3Qxe2ZpbGw6I0MzMDAyRjt9DQoJLnN0MntmaWxsOiNGRkZGRkY7fQ0KPC9zdHlsZT4NCjxnPg0KCTxwb2x5Z29uIGNsYXNzPSJzdDAiIHBvaW50cz0iMTI1LDMwIDEyNSwzMCAxMjUsMzAgMzEuOSw2My4yIDQ2LjEsMTg2LjMgMTI1LDIzMCAxMjUsMjMwIDEyNSwyMzAgMjAzLjksMTg2LjMgMjE4LjEsNjMuMiAJIi8+DQoJPHBvbHlnb24gY2xhc3M9InN0MSIgcG9pbnRzPSIxMjUsMzAgMTI1LDUyLjIgMTI1LDUyLjEgMTI1LDE1My40IDEyNSwxNTMuNCAxMjUsMjMwIDEyNSwyMzAgMjAzLjksMTg2LjMgMjE4LjEsNjMuMiAxMjUsMzAgCSIvPg0KCTxwYXRoIGNsYXNzPSJzdDIiIGQ9Ik0xMjUsNTIuMUw2Ni44LDE4Mi42aDBoMjEuN2gwbDExLjctMjkuMmg0OS40bDExLjcsMjkuMmgwaDIxLjdoMEwxMjUsNTIuMUwxMjUsNTIuMUwxMjUsNTIuMUwxMjUsNTIuMQ0KCQlMMTI1LDUyLjF6IE0xNDIsMTM1LjRIMTA4bDE3LTQwLjlMMTQyLDEzNS40eiIvPg0KPC9nPg0KPC9zdmc+DQo=">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" href="https://blog.angular.io//">Angular blog</a></h2>
-  </li>
-</ul>
+<!-- <nav class="navbar" [ngClass]="{'moving': moving}">
+  
+      <div class="nav-brand">
+        <a routerLink="/home"  class="navbar-item">
+          <img [src]="logo" alt="Bulma logo">
+        </a>
+        <button class="button navbar-burger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+    </div>
+     <div class="nav-center hide"> 
+                  <a routerLink="/about-us" routerLinkActive="active" class="nav-item is-tab is-hidden-mobile carousel-links">About Us</a>
+                  <a href="#" class="nav-item is-tab is-hidden-mobile carousel-links">Programs</a>
+                  <a href="#" class="nav-item is-tab is-hidden-mobile carousel-links">Get Involved</a>
+                  <a href="#" class="nav-item is-tab is-hidden-mobile carousel-links">Blog</a>
+                  <a href="#" class="nav-item is-tab is-hidden-mobile carousel-links">Contact Us</a>
+    </div> -->
+    
+    <!-- <div class="navbar-end donate">
+      <a href="#" id="donate">
+        <span>
+          Donate<fa name="heart"></fa>
+        </span>
+      </a>
+    </div> -->
 
+   
+    <!-- <span class="nav-toggle" ng-click="active = !active" ng-class="{'is-active':active}">
+        <span></span>
+        <span></span>
+        <span></span>
+      </span>
+      <div class="nav-right nav-menu not-visible animated fadeInDown" ng-class="{'is-active':active}">
+      <a href="#" class="nav-item is-tab is-hidden-desktop"  >About Us</a>
+        <a href="#" class="nav-item is-tab is-hidden-desktop"  >Programs</a>
+        <a href="#" class="nav-item is-tab is-hidden-desktop"  >Get Involved</a>
+        <a href="#" class="nav-item is-tab is-hidden-desktop"  >Blog</a>
+        <a href="#" class="nav-item is-tab is-hidden-desktop"  >Contact Us</a>
+
+      </div> -
+  
+  </nav> -->
+
+  <nav class="navbar nav-fixed-top" [ngClass]="{'moving': moving}">
+      <div class="navbar-brand">
+          <a routerLink="/home"  class="navbar-item">
+            <img [src]="logo" alt="Bulma logo">
+          </a>
+    
+
+    
+        <div class="navbar-burger burger" data-target="navMenuTransparentExample" (click)="showMenu()" [ngClass]="{'is-active': menuActive}" >
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    
+      <div id="navMenuTransparentExample" class="navbar-menu" [ngClass]="{'is-active': menuActive}">
+
+    
+        <div class="navbar-end">
+
+            <a class="navbar-item " href="http://bulma.io/expo/">
+              About Us
+            </a>
+            <a class="navbar-item " href="#" [routerLink]="['/programs']" routerLinkActive="is-active">
+              Programs
+            </a>
+  
+            <a class="navbar-item " href="http://bulma.io/expo/">
+              Get Involved
+            </a>
+            <a class="navbar-item " href="http://bulma.io/love/">
+              Blog
+            </a>
+            <a class="navbar-item " href="http://bulma.io/expo/">
+              Contact us
+            </a>
+            <a href="#" class="donate" id="donate">
+                <span>
+                  Donate<fa name="heart"></fa>
+                </span>
+              </a>
+        </div>
+      </div>
+    </nav>
+
+
+  <router-outlet id="main-content"></router-outlet>
+
+  <div class="footer">
+    <div class="columns">
+      <div class="column summary">
+        <img src="assets/img/logo-white.png" alt="">
+        <p>We serve young men of color between the 7th and 11th grade who are from low income communities. Since 2009, we’ve used the concept of developing strong teams as a way for our young men to learn about collaboration, ideation, and long-lasting life skills. In small teams our youths learn the process of taking an idea from concept to market.</p>
+        <p><a href="#">http://exploringtech.org/</a></p>
+      </div>
+      <div class="column second">
+        <h1>OUR HACKER SPACE</h1>
+        <p>3655 South Grand Ave.</p>
+        <p>Los Angeles, CA 90007 Ste. 220</p>
+        <p>info@urbantxt.com</p>
+      </div>
+      <div class="column third">
+        <h1>SUBSCRIBE</h1>
+        <div class="field has-addons">
+            <div class="control">
+              <input class="input" type="text" placeholder="Email">
+            </div>
+            <div class="control">
+              <a class="button is-info">
+                Submit
+              </a>
+            </div>
+        </div>
+        <h1>CONNECT</h1>
+        <ul class="social-media">
+          <li><a href="#"><fa name="facebook"></fa></a></li>
+          <li><a href="#"><fa name="twitter"></fa></a></li>
+          <li><a href="#"><fa name="instagram"></fa></a></li>
+          <li><a href="#"><fa name="youtube"></fa></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>© 2017 Teens Exploring Technology ALL RIGHTS RESERVED</p>
+    </div>
+  </div>
