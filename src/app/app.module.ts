@@ -4,7 +4,8 @@ import { RouterModule, Routes} from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { Angular2FontawesomeModule } from 'angular2-fontawesome/angular2-fontawesome';
 
-import { RoutingModule} from './routing/routing.module'
+import { RoutingModule} from './routing/routing.module';
+import {HashLocationStrategy, LocationStrategy} from "@angular/common";
 //components
 import { AppComponent } from './app.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
@@ -14,8 +15,14 @@ import { SclaComponent } from './scla/scla.component';
 import { SealsComponent } from './seals/seals.component';
 import { LeadcsComponent } from './leadcs/leadcs.component';
 import { HackathonComponent } from './hackathon/hackathon.component';
+import { GetInvovledComponent } from './get-invovled/get-invovled.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
+import { VolunteerComponent } from './volunteer/volunteer.component';
+import { MentorComponent } from './mentor/mentor.component';
+import { FellowshipComponent } from './fellowship/fellowship.component';
+import { FormsModule } from '@angular/forms';
 
-
+import {HttpClientModule} from '@angular/common/http';
 
 
 @NgModule({
@@ -27,15 +34,23 @@ import { HackathonComponent } from './hackathon/hackathon.component';
     SclaComponent,
     SealsComponent,
     LeadcsComponent,
-    HackathonComponent
+    HackathonComponent,
+    GetInvovledComponent,
+    ContactUsComponent,
+    VolunteerComponent,
+    MentorComponent,
+    FellowshipComponent,
+
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     Angular2FontawesomeModule,
-    RoutingModule
+    RoutingModule,
+    FormsModule, 
+    HttpClientModule
   ],
-  providers: [],
+  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

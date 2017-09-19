@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {fadeInAnimation} from '../animations/index'
+import {fadeInAnimation} from '../animations/index';
 
 
 @Component({
@@ -14,7 +14,7 @@ export class ProgramsComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log("programs")
+
   }
 
 }

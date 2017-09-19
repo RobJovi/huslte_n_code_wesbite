@@ -320,25 +320,7 @@
     padding: 25px 75px 40px 75px;
 }
 
-#about-us-content {
-    padding-bottom: 50px;
-    border-bottom: solid 1px #EAEAEA;
-}
 
-#our-story-content {
-    padding-bottom: 50px;
-    border-bottom: solid 1px #EAEAEA;
-}
-
-#our-mission-content {
-    padding-bottom: 50px;
-    border-bottom: solid 1px #EAEAEA;
-}
-
-#our-team-content {
-    padding-bottom: 50px;
-    border-bottom: solid 1px #EAEAEA;
-}
 
 .not-visible {
     -webkit-animation: fadeOut .5s;
@@ -356,32 +338,17 @@
     -webkit-animation-delay: .5s;
     animation-delay: .5s;
 }
-
-#about-us ul {
-    list-style: none;
+#about-us h1 {
     text-align: center;
-    border-bottom: solid 1px #EAEAEA;
-    height: 43px;
-    margin-left: 0px;
-    margin-right: 0px;
+    margin-bottom: 0;
+    font-size: 36px;
+    font-weight: 600;
+}
+#about-us .columns .column p{
+    font-size: 1.2em;
 }
 
-#about-us ul li {
-    display: inline-block;
-    padding-bottom: 17px;
-    margin: 0 10px;
-    cursor: pointer;
-}
 
-#about-us ul li:hover {
-    color: #189EB3;
-    border-bottom: solid 2px #189EB3;
-}
-
-.about-us-active {
-    color: #189EB3;
-    border-bottom: solid 2px #189EB3;
-}
 
 #our-team-content {
     position: relative;
@@ -587,11 +554,14 @@
     animation: text-in 0.5s ease;
 }
 #programs {
-    margin-top: 50px;
-    margin-bottom: 50px;
+
     padding: 25px 25px 50px 25px;
 }
-
+#programs a {
+    
+    color: #4a4a4a;
+    
+    }
 #programs h1 {
     text-align: center;
     margin-bottom: 0;
@@ -620,7 +590,6 @@
 }
 
 #programs .row-1 {
-    padding-top: 50px;
     overflow: hidden;
 }
 
@@ -754,6 +723,7 @@
     width: 100%;
     height: auto;
     padding: 50px 150px 75px 150px;
+    margin-top: 50px;
 }
 
 #newsletter h1 {
@@ -794,7 +764,7 @@
 }
 
 #get-invovled {
-    padding-top: 75px;
+    padding-top: 35px;
     padding-left: 25px;
     padding-right: 25px;
 }
@@ -1080,6 +1050,7 @@
         margin: auto;
         text-transform: uppercase;
     }
+    
     #about-us .columns .column img {
         height: auto;
         max-width: 70%;

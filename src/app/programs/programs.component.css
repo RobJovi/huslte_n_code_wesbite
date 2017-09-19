@@ -25,7 +25,7 @@
     opacity: .45;
 }
 
-.banner h1{
+.banner h1 {
     position: absolute;
     bottom: 0;
     left: 25px;
@@ -34,20 +34,17 @@
     color: #fff;
 }
 
-.summary{
+.summary {
     margin-top: 35px;
     padding: 0 125px;
     font-size: 1.2rem;
 }
 
-.summary .center{
+.summary .center {
     text-align: center;
 }
-
-
 #programs {
     margin-top: 50px;
-    margin-bottom: 50px;
     padding: 25px 25px 50px 25px;
 }
 
@@ -76,25 +73,63 @@
 }
 
 .noselect {
-    -webkit-touch-callout: none; /* iOS Safari */
-      -webkit-user-select: none; /* Safari */
-       -khtml-user-select: none; /* Konqueror HTML */
-         -moz-user-select: none; /* Firefox */
-          -ms-user-select: none; /* Internet Explorer/Edge */
-              user-select: none; /* Non-prefixed version, currently
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    /* Non-prefixed version, currently
                                     supported by Chrome and Opera */
-  }
+}
 
-  #programs ul{
-      text-align: center;
-  }
-  #programs ul a{
-      color: black;
-  }
-  #programs ul .is-active{
-      color:#189EB3;
-  }
-  #programs ul li{
-      display: inline-block;
-      margin: 0px 10px 0 10px;
-  }
+#programs ul {
+    text-align: center;
+    border-bottom: solid 2px #189EB3;
+    margin: 0 125px 0 125px;
+    padding-bottom: 25px;
+}
+
+#programs ul a {
+    color: black;
+}
+
+#programs ul .is-active {
+    color: #189EB3;
+}
+
+#programs ul li {
+    display: inline-block;
+    margin: 0px 10px 0 10px;
+}
+
+@media only screen and (max-width: 414px) {
+    .banner h1 {
+        position: absolute;
+        bottom: 0;
+        left: 25px;
+        text-transform: uppercase;
+        font-size: 2rem !important;
+        color: #fff;
+    }
+    .summary[_ngcontent-c2] {
+        margin-top: 35px;
+        padding: 0 35px;
+        font-size: 1.2rem;
+    }
+    .banner h1 {
+        font-size: 3rem;
+    }
+    #programs ul {
+        margin: 0 5px 0 5px;
+    }
+    #programs ul li {
+        margin-top: 20px;
+    }
+
+}

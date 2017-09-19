@@ -281,7 +281,7 @@ html * {
         margin-top: 0;
     }
     .navbar-end .is-active{
-        color: #189EB3;
+        color: #189EB3 !important;
     }
 @media only screen and (max-width: 1023px) {
     .navbar-end .navbar-item{

@@ -30,6 +30,17 @@
     </div>
   </div>
   <div id="about-us" class="content-section">
+      <div class="header">
+          <h1>Why we serve young men of color</h1>
+          <hr class="title-seperator-programs">
+      </div>
+      <div class="columns">
+        <div class="column">
+            <p>We inspire young at risk Black and Brown boys to become technology entrepreneurs. These boys are at the highest risk of dropping out of HS and being incarcerated.</p>
+        </div>
+      </div>
+  </div>
+  <!-- <div id="about-us" class="content-section">
     <ul class="noselect">
       <li [ngClass]="{'about-us-active': links[0]}" (click)="aboutUsContentChange(0)" class="noselect">About Us</li>
       <li [ngClass]="{'about-us-active': links[1]}" (click)="aboutUsContentChange(1)" class="noselect">Our Story</li>
@@ -66,7 +77,8 @@
             to empower teens from similar communities as his . As a kid Oscar had a passion for technology, so he enrolled
             in the only tech class offered in his school, which turned out to be a glorified typing class. Even though his
             school didn’t offer any relevant opportunities in tech, Oscar pursued his love for technology through higher
-            education.</p>
+            education.
+          </p>
         </div>
       </div>
       <div class="columns columns-padding">
@@ -139,7 +151,7 @@
           <div class="img-content"></div>
         </div>
         <div class="column">
-          <div class="text" (click)="test()">
+          <div class="text" >
             <h1>Roberto Sanchez</h1>
             <p>Developer</p>
           </div>
@@ -157,15 +169,20 @@
       </div>
 
     </div>
-  </div>
+  </div> -->
   <!--end about us content -->
   <div id="programs" class="content-section">
+    <div class="header">
+      <h1>Our Programs</h1>
+      <hr class="title-seperator-programs">
+
+    </div>
     <div class="columns row-1 is-multiline">
       <div class="column is-half-tablet is-half-desktop">
         <a href="#" [routerLink]="['/programs','SCLA']">
           <div class="text-program">
             <h1>Learn more</h1>
-           
+
           </div>
           <div class="program-img"></div>
           <p>Summer Coding Leadership Academy (SCLA) </p>
@@ -173,51 +190,37 @@
       </div>
 
       <div class="column is-half-tablet is-half-desktop">
-            <a href="#" [routerLink]="['/programs','seals']">
-              <div class="text-program">
-                <h1>Learn More</h1>
-               
-              </div>
-              <div class="program-img"></div>
-              <p>Seals Program </p>
-            </a>
+        <a href="#" [routerLink]="['/programs','seals']">
+          <div class="text-program">
+            <h1>Learn More</h1>
+
           </div>
-          <div class="column is-half-tablet is-half-desktop">
-                <a href="#" [routerLink]="['/programs','leadCs']">
-                  <div class="text-program">
-                    <h1>Learn More</h1>
-                    
-                  </div>
-                  <div class="program-img"></div>
-                  <p>Lead Computer Science (Lead CS) </p>
-                </a>
-              </div>
-              <div class="column is-half-tablet is-half-desktop">
-                    <a href="#" [routerLink]="['/programs','hackathon']">
-                      <div class="text-program">
-                        <h1>Learn more</h1>
-                        
-                      </div>
-                      <div class="program-img"></div>
-                      <p>Hustle N Code Hackathon </p>
-                    </a>
-                  </div>
+          <div class="program-img"></div>
+          <p>Seals Program </p>
+        </a>
+      </div>
+      <div class="column is-half-tablet is-half-desktop">
+        <a href="#" [routerLink]="['/programs','leadCs']">
+          <div class="text-program">
+            <h1>Learn More</h1>
+
+          </div>
+          <div class="program-img"></div>
+          <p>Lead Computer Science (Lead CS) </p>
+        </a>
+      </div>
+      <div class="column is-half-tablet is-half-desktop">
+        <a href="#" [routerLink]="['/programs','hackathon']">
+          <div class="text-program">
+            <h1>Learn more</h1>
+
+          </div>
+          <div class="program-img"></div>
+          <p>Hustle N Code Hackathon </p>
+        </a>
+      </div>
     </div>
 
-  </div>
-  <div id="newsletter">
-    <h1>subscribe to our newsletter</h1>
-    <div class="field">
-      <label class="label">Email Address</label>
-      <div class="control">
-        <input class="input" type="email">
-      </div>
-      <p class="control">
-        <button class="button is-success">
-                          submit
-                        </button>
-      </p>
-    </div>
   </div>
   <div id="get-invovled">
     <div class="header">
@@ -231,7 +234,7 @@
       </div>
       <div class="column text-icon">We are a non-profit organization and every little bit helps. We have made it easy for your to donate to our cause.
         Please help us keep our program alive by donating any amount.
-        <div class="link"><a class="button is-primary">Donate</a> </div>
+        <div class="link"><a class="button is-primary" href="https://txt.networkforgood.com/" target="_blank">Donate</a> </div>
       </div>
     </div>
     <div class="columns">
@@ -240,7 +243,7 @@
       </div>
       <div class="column text-icon">Just because you don't know design or programming it does not mean you can't help us organize events, run the program
         or coordinate meetings and more.
-        <div class="link"><a class="button is-primary">Volunteer</a> </div>
+        <div class="link"><a class="button is-primary" href="#" [routerLink]="['/getInvolved','volunteer']">Volunteer</a> </div>
       </div>
     </div>
     <div class="columns">
@@ -249,7 +252,7 @@
       </div>
       <div class="column text-icon">Are you a passionate professional in the technology industry? You can make a difference in a teen's life by contributing
         your time and expertise as part of our weekly workshops. Contact us and let us know how you can help.
-        <div class="link"><a class="button is-primary">Mentor</a> </div>
+        <div class="link"><a class="button is-primary" href="#" [routerLink]="['/getInvolved','mentor']">Mentor</a> </div>
       </div>
     </div>
     <div class="columns">
@@ -258,86 +261,30 @@
       </div>
       <div class="column text-icon">As a TXT fellow, you will grow as an individual while inspiring the next generation of tech entrepreneurs to develop
         solutions for social problems in low-income communities.
-        <div class="link"><a class="button is-primary">Fellowship</a> </div>
+        <div class="link"><a class="button is-primary" href="#" [routerLink]="['/getInvolved','fellowship']">Fellowship</a> </div>
       </div>
     </div>
   </div>
-  <div id="contact-us">
-    <h1>contact us</h1>
-    <div class="field is-horizontal">
-      <div class="field-body">
+  <div id="newsletter">
+        <h1>subscribe to our newsletter</h1>
+      <form (ngSubmit)="onSubmit(email)"  #newsletterForm="ngForm"  >
         <div class="field">
-          <p class="control is-expanded has-icons-left">
-            <input class="input" type="text" placeholder="Full Name">
-            <span class="icon is-small is-left">
-                    <i class="fa fa-user"></i>
-                  </span>
+          <label class="label">Email Address</label>
+          <div class="control">
+            <input class="input" type="text" #email="ngModel" name="email" id="email"  required email [(ngModel)]="model.email" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$">
+          </div>
+          <div class="alert alert-danger" [hidden]="email.pristine || email?.valid">
+            Please Enter A Valid Email
+          </div>
+          <p class="control">
+            <input class="button is-success" type="submit" value="Subscribe" [disabled]="!email.valid">
+            <!-- <button class="button is-success">
+                              submit
+                            </button> -->
           </p>
         </div>
+      </form>
       </div>
-    </div>
-
-    <div class="field is-horizontal">
-      <div class="field-body">
-        <div class="field">
-          <p class="control is-expanded has-icons-left has-icons-right">
-            <input class="input" type="email" placeholder="Email">
-            <span class="icon is-small is-left">
-                        <i class="fa fa-envelope"></i>
-                      </span>
-            <!-- <span class="icon is-small is-right">
-                        <i class="fa fa-check"></i>
-                      </span> -->
-          </p>
-        </div>
-        <div class="field is-expanded">
-          <div class="field">
-            <p class="control is-expanded has-icons-left">
-              <input class="input" type="tel" placeholder="Phone number">
-              <span class="icon is-small is-left">
-                                    <i class="fa fa-phone"></i>
-                            </span>
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="field is-horizontal">
-      <div class="field-body">
-        <div class="field">
-          <div class="control">
-            <input class="input" type="text" placeholder="Subject - e.g. Partnership opportunity">
-          </div>
-          <!-- <p class="help is-danger">
-                      This field is required
-                    </p> -->
-        </div>
-      </div>
-    </div>
-
-    <div class="field is-horizontal">
-      <div class="field-body">
-        <div class="field">
-          <div class="control">
-            <textarea class="textarea" placeholder="Explain how we can help you"></textarea>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="field is-horizontal">
-      <div class="field-body">
-        <div class="field">
-          <div class="control custom-btn">
-            <button class="button is-primary">
-                    Send
-                  </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
   <!-- <div id="blog">
         <div class="header">
             <h1>From Our Blog</h1>

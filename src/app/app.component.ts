@@ -1,7 +1,10 @@
 import { Component,HostListener, Inject, OnInit } from '@angular/core';
 import { DOCUMENT} from '@angular/platform-browser';
 import * as _ from "lodash";
-import {fadeInAnimation} from './animations/index'
+import {fadeInAnimation} from './animations/index';
+import { Router, NavigationStart, NavigationEnd } from '@angular/router';
+import { Location, PopStateEvent } from "@angular/common";
+
 
 @Component({
   selector: 'app-root',
@@ -15,11 +18,44 @@ export class AppComponent {
   menuActive = false;
   logo ='assets/img/logo-white.png';
   private throttleOnScroll = _.throttle(() => this.onScroll(), 50, {});
-  constructor(@Inject(DOCUMENT) private document: Document){
+
+
+  private lastPoppedUrl: string;
+  private yScrollStack: number[] = [];
+
+  constructor(@Inject(DOCUMENT) private document: Document,private router: Router, private location: Location){
 
   }
 
 
+  ngOnInit() {
+      this.location.subscribe((ev:PopStateEvent) => {
+          this.lastPoppedUrl = ev.url;
+      });
+      this.router.events.subscribe((ev:any) => {
+        
+          if (ev instanceof NavigationStart) {
+            console.log(ev.url);
+            if (ev.url != this.lastPoppedUrl){
+              if(ev.url == "/programs/leadCs" || ev.url == "/programs/SCLA" || ev.url == "/programs/seals" || ev.url == "/programs/hustlencode" || ev.url == "/getInvolved/volunteer" || ev.url == "/getInvolved/mentor" || ev.url == "/getInvolved/fellowship"){
+                
+              }else{
+                
+                this.yScrollStack.push(window.scrollY);
+              }
+            }
+          } else if (ev instanceof NavigationEnd) {
+            if(ev.url == "/programs/leadCs" || ev.url == "/programs/SCLA" || ev.url == "/programs/seals" || ev.url == "/programs/hustlencode" || ev.url == "/getInvolved/volunteer" || ev.url == "/getInvolved/mentor" || ev.url == "/getInvolved/fellowship"){
+              
+            }
+            else if (ev.url == this.lastPoppedUrl) {
+                  this.lastPoppedUrl = undefined;
+                  window.scrollTo(0, this.yScrollStack.pop());
+            } else
+                  window.scrollTo(0, 0);
+          }
+      });
+  }
 
   title = 'app';
   @HostListener("window:scroll", [])
@@ -27,6 +63,10 @@ export class AppComponent {
     this.throttleOnScroll();
   }
   showMenu(){
+    this.menuActive = !this.menuActive;
+  }
+  closeMenu(){
+    console.log("closing menu")
     this.menuActive = !this.menuActive;
   }
   onScroll(){
@@ -39,6 +79,7 @@ export class AppComponent {
       this.logo = 'assets/img/logo-white.png'
     }
   }
+
 
 }
 
