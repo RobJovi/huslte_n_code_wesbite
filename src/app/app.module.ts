@@ -23,7 +23,8 @@ import { FellowshipComponent } from './fellowship/fellowship.component';
 import { FormsModule } from '@angular/forms';
 
 import {HttpClientModule} from '@angular/common/http';
-
+import { PhonePipePipe } from './phone-pipe.pipe';
+import { PreloadSelectedModulesList } from './config/preload_selected_modules_list'
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import {HttpClientModule} from '@angular/common/http';
     VolunteerComponent,
     MentorComponent,
     FellowshipComponent,
+    PhonePipePipe,
 
   ],
   imports: [
@@ -50,7 +52,7 @@ import {HttpClientModule} from '@angular/common/http';
     FormsModule, 
     HttpClientModule
   ],
-  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
+  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}, PreloadSelectedModulesList],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

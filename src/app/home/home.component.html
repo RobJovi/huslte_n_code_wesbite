@@ -271,7 +271,7 @@
         <div class="field">
           <label class="label">Email Address</label>
           <div class="control">
-            <input class="input" type="text" #email="ngModel" name="email" id="email"  required email [(ngModel)]="model.email" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$">
+            <input class="input" type="text" #email="ngModel" name="email" id="email"  required email [(ngModel)]="model.email" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" required>
           </div>
           <div class="alert alert-danger" [hidden]="email.pristine || email?.valid">
             Please Enter A Valid Email

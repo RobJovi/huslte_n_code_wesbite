@@ -64,6 +64,13 @@
         box-shadow: 0 0 0 .125em rgba(0,209,178,.25);
     
 }
+.input-error{
+    border: solid thin #ff0000;
+}
+.input-success{
+    border: solid thin #189EB3;
+}
+
 @media only screen and (max-width: 414px) {
     .banner h1 {
         position: absolute;

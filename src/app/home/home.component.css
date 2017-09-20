@@ -941,6 +941,16 @@
     margin: auto;
     width: 70%;
 }
+.button.is-success[disabled],.button.is-success {
+    background-color: #fff;
+    border-color: #189EB3;
+    color: #189EB3;
+}
+.button.is-success:hover {
+    background-color: #189EB3;
+    border-color: #fff;
+    color: #fff;
+}
 
 @keyframes background-color2 {
     from {
@@ -1210,7 +1220,7 @@
         padding: 0px 25px 0px 25px;
     }
     #sponsers .columns {
-        margin-top: 15? px;
+        margin-top: 15 px;
         padding: 0px 25px3 0px 25px;
         margin-top: 50px;
     }

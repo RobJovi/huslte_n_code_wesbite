@@ -21,7 +21,9 @@ export class HomeComponent implements OnInit {
   slides0 = [false, false, false, false];
   slides1 = [false, false, false, false];
 
-  model = {};
+  model = {
+    email: ''
+  };
   constructor(public http: HttpClient) { }
 
 

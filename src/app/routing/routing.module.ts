@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { PreloadSelectedModulesList } from '../config/preload_selected_modules_list'
 
 import { AppComponent } from '../app.component';
 import { AboutusComponent } from '../aboutus/aboutus.component';
@@ -23,19 +24,19 @@ const appRoutes = [
   {
     path: 'programs', component: ProgramsComponent,
     children: [
-      { path: 'SCLA', component: SclaComponent },
-      { path: 'seals', component: SealsComponent },
-      { path: 'leadCs', component: LeadcsComponent },
-      { path: 'hustlencode', component: HackathonComponent },
+      { path: 'SCLA', component: SclaComponent, data:{preload: true} },
+      { path: 'seals', component: SealsComponent, data:{preload: true} },
+      { path: 'leadCs', component: LeadcsComponent, data:{preload: true} },
+      { path: 'hustlencode', component: HackathonComponent, data:{preload: true} },
       { path: '**', redirectTo: 'SCLA', pathMatch: 'full' }
     ]
   },
   {
     path: 'getInvolved', component: GetInvovledComponent,
     children: [
-      { path: 'volunteer', component: VolunteerComponent },
-      { path: 'mentor', component: MentorComponent },
-      { path: 'fellowship', component: FellowshipComponent },
+      { path: 'volunteer', component: VolunteerComponent , data:{preload: true}},
+      { path: 'mentor', component: MentorComponent, data:{preload: true} },
+      { path: 'fellowship', component: FellowshipComponent, data:{preload: true} },
       { path: '**', redirectTo: 'volunteer', pathMatch: 'full' }
     ]
   },
@@ -48,7 +49,7 @@ const appRoutes = [
   imports: [
     RouterModule.forRoot(
       appRoutes,
-      { enableTracing: false }
+      {preloadingStrategy: PreloadSelectedModulesList }
     )
   ],
   exports: [
