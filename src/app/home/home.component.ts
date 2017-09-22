@@ -21,11 +21,68 @@ export class HomeComponent implements OnInit {
   slides0 = [false, false, false, false];
   slides1 = [false, false, false, false];
 
+  reset;
+  showContent=[true,false,false,false,false,false,false,false];  
+  imgSrc = [];
   model = {
     email: ''
   };
-  constructor(public http: HttpClient) { }
+  constructor(public http: HttpClient) { 
+    this.imgSrc = [
+      'assets/circle/Computer.png',
+      'assets/circle/Award.png',
+      'assets/circle/School.png',
+      'assets/circle/People.png',
+      'assets/circle/Hat.png',
+      'assets/circle/Case.png',
+      'assets/circle/Hands.png'
+    ]
+  }
+  showInfo(num){
+    this.showContent=[false,false,false,false,false,false,false,false]; 
+    this.showContent[num]= true; 
 
+    this.imgSwap(num);
+  }
+  imgSwap(num){
+    if(this.reset){
+      this.resetImg(this.reset);
+    }
+    if(num == 1){
+      this.imgSrc[0] = 'assets/circle/Computer-alt.png';
+    }else if( num ==2){
+      this.imgSrc[1] = 'assets/circle/Award-alt.png';
+    }else if(num == 3){
+      this.imgSrc[2] = 'assets/circle/School-alt.png';
+    }else if( num ==4){
+      this.imgSrc[3] = 'assets/circle/People-alt.png';
+    }else if(num == 5){
+      this.imgSrc[4] = 'assets/circle/Hat-alt.png';
+    }else if( num == 6){
+      this.imgSrc[5] = 'assets/circle/Case-alt.png';
+    }else if(num == 7){
+      this.imgSrc[6] = 'assets/circle/Hands-alt.png';
+    }
+    this.reset = num;
+  }
+
+  resetImg(num){
+    if(num == 1){
+      this.imgSrc[0] = 'assets/circle/Computer.png';
+    }else if( num ==2){
+      this.imgSrc[1] = 'assets/circle/Award.png';
+    }else if(num == 3){
+      this.imgSrc[2] = 'assets/circle/School.png';
+    }else if( num ==4){
+      this.imgSrc[3] = 'assets/circle/People.png';
+    }else if(num == 5){
+      this.imgSrc[4] = 'assets/circle/Hat.png';
+    }else if( num == 6){
+      this.imgSrc[5] = 'assets/circle/Case.png';
+    }else if(num == 7){
+      this.imgSrc[6] = 'assets/circle/Hands.png';
+    }
+  }
 
   ngOnInit() {
     var _this = this;
@@ -58,7 +115,42 @@ export class HomeComponent implements OnInit {
     });
 
   }
-
+  hoverCircle(num){
+    if(num == 1){
+      this.imgSrc[0] = 'assets/circle/Computer-alt.png';
+    }else if( num ==2){
+      this.imgSrc[1] = 'assets/circle/Award-alt.png';
+    }else if(num == 3){
+      this.imgSrc[2] = 'assets/circle/School-alt.png';
+    }else if( num ==4){
+      this.imgSrc[3] = 'assets/circle/People-alt.png';
+    }else if(num == 5){
+      this.imgSrc[4] = 'assets/circle/Hat-alt.png';
+    }else if( num == 6){
+      this.imgSrc[5] = 'assets/circle/Case-alt.png';
+    }else if(num == 7){
+      this.imgSrc[6] = 'assets/circle/Hands-alt.png';
+    }
+  }
+  hoverCircleAlt(num,condition){
+    if(condition == false){
+      if(num == 1){
+        this.imgSrc[0] = 'assets/circle/Computer.png';
+      }else if( num ==2){
+        this.imgSrc[1] = 'assets/circle/Award.png';
+      }else if(num == 3){
+        this.imgSrc[2] = 'assets/circle/School.png';
+      }else if( num ==4){
+        this.imgSrc[3] = 'assets/circle/People.png';
+      }else if(num == 5){
+        this.imgSrc[4] = 'assets/circle/Hat.png';
+      }else if( num == 6){
+        this.imgSrc[5] = 'assets/circle/Case.png';
+      }else if(num == 7){
+        this.imgSrc[6] = 'assets/circle/Hands.png';
+      }
+    }
+  }
   onSubmit(data){
     var payload ={
       "email_address": data.model

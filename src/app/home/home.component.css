@@ -348,7 +348,235 @@
     font-size: 1.2em;
 }
 
+#about-us .cycle{
+    position: relative;
+    text-align: center;
+    padding: 125px;
+    margin-top: 50px;
+    margin-bottom: 50px;
 
+}
+
+#about-us .cycle-styles {
+    border: solid 4px #189EB3;
+    background-color: #fff;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+#about-us .cycle-styles:hover {
+    border: solid 4px #189EB3;
+    background-color: #189EB3;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+#about-us .cycle-styles img{
+    max-width: 80%;
+}
+#about-us .cycle .cycle-1{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    margin-top:0;
+    padding-top: 18px;
+}
+#about-us .cycle .cycle-2{
+    position: absolute;
+    top: -330px;
+    left: 500px;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    padding-top: 8px;
+
+}
+#about-us .cycle .cycle-3{
+    position: absolute;
+    top: 150px;
+    left: 570px;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    padding-top: 8px;
+
+}
+#about-us .cycle .cycle-4{
+    position: absolute;
+    top: 545px;
+    left: 270px;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    padding-top: 15px;
+
+}
+#about-us .cycle .cycle-5{
+    position: absolute;
+    top: 545px;
+    left: -270px;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    padding-top: 21px;
+
+}
+#about-us .cycle .cycle-5 img{
+    max-width: 70%;
+}
+#about-us .cycle .cycle-6{
+    position: absolute;
+    top: 150px;
+    left: -570px;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    padding-top: 9px;
+
+}
+#about-us .cycle .cycle-6 img{
+    max-width: 77%;
+}
+#about-us .cycle .cycle-7{
+    position: absolute;
+    top: -330px;
+    left: -500px;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    padding-top: 10px;
+}
+#about-us .cycle .cycle-7 img{
+    max-width: 73%;
+}
+#about-us .cycle .centerCircle{
+    position: relative;
+    text-align: center;
+    border: solid thick #189EB3;
+    display: block;
+    height: 425px;
+    width: 425px;
+    border-radius: 50%;
+    margin: auto;
+    transition: all 0.5s ease;
+    font-size: 1.5rem;    
+}
+#about-us .cycle .centerCircle h1{
+    text-align: center;
+    color: #189EB3;
+    width:75%;
+    margin: auto;
+    margin-top: 20%;
+    text-transform: capitalize;
+    font-size:  3rem;
+}
+
+#about-us .cycle .centerCircle img{
+    max-width: 55%;
+}
+.init{
+    opacity: 0;
+}
+.centerCircle .content{
+    position: absolute;
+    display: block;
+    height: 100px;
+    width: 390px;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 5;
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+.centerCircle .show-animation{
+    opacity: 1;
+}
+
+.circle-is-active{
+    background-color: #189EB3 !important;
+}
+.arrow{
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 50px;
+}
+.cycle *{
+    transition: all 0.5s ease;
+}
+.arrow img{
+    max-width: 100%;
+}
+.arrow-1{
+    top: -480px;
+    left: 270px;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    -webkit-transform: rotate(27deg); /* Chrome, Safari, Opera */
+    transform: rotate(27deg);
+}
+.arrow-2{
+    top: -92px;
+    left: 559px;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+    transform: rotate(90deg);
+}
+.arrow-3{
+    top: 363px;
+    left: 440px;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    -webkit-transform: rotate(125deg); /* Chrome, Safari, Opera */
+    transform: rotate(125deg);
+}
+.arrow-4{
+    top: 555px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
+    transform: rotate(180deg);
+}
+.arrow-5{
+    top: 363px;
+    left: -440px;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    -webkit-transform: rotate(225deg); /* Chrome, Safari, Opera */
+    transform: rotate(225deg);
+}
+.arrow-6{
+    top: -92px;
+    left: -559px;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    -webkit-transform: rotate(270deg); /* Chrome, Safari, Opera */
+    transform: rotate(270deg);
+}
+.arrow-7{
+    top: -480px;
+    left: -270px;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    -webkit-transform: rotate(-27deg); /* Chrome, Safari, Opera */
+    transform: rotate(-27deg);
+}
 
 #our-team-content {
     position: relative;
@@ -1226,5 +1454,152 @@
     }
     #sponsers .columns .column {
         margin-top: 15px;
+    }
+    #about-us .cycle{
+        padding: 0;
+    }
+    #about-us .cycle .centerCircle{
+        height: 325px;
+        width: 325px;
+    }
+    #about-us .cycle .centerCircle h1{
+        font-size: 2rem;
+    }
+    #about-us .cycle .centerCircle{
+        font-size: 1rem;
+    }
+    .centerCircle .content{
+        width: 245px;
+    }#about-us .cycle{
+        margin-top: 125px;
+        margin-bottom: 175px;
+    }
+    #about-us .cycle-styles{
+        height: 75px;
+        width: 75px;
+    }
+    #about-us .cycle-styles img {
+        max-width: 65%;
+    }
+    #about-us .cycle .cycle-1 {
+        top: -100px;
+    }
+    #about-us .cycle .cycle-2 {
+        position: absolute;
+        top: -370px;
+        left: 265px;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        padding-top: 8px;
+    }
+    #about-us .cycle .cycle-3 {
+        position: absolute;
+        top: 345px;
+        left: 265px;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        padding-top: 8px;
+    }
+    #about-us .cycle .cycle-4 {
+        position: absolute;
+        top: 435px;
+        left: 135px;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        padding-top: 15px;
+    }
+    #about-us .cycle .cycle-5{
+        position: absolute;
+        top: 430px;
+        left: -135px;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        padding-top: 21px;
+    }
+    #about-us .cycle .cycle-6 {
+        position: absolute;
+        top: 345px;
+        left: -265px;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        padding-top: 9px;
+    }
+    #about-us .cycle .cycle-7 {
+        position: absolute;
+        top: -370px;
+        left: -265px;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        padding-top: 10px;
+    }
+    .arrow {
+        position: absolute;
+        display: block;
+        width: 25px;
+        height: 26px;
+    }
+    .arrow-1{
+        top: -425px;
+        left: 150px;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        -webkit-transform: rotate(27deg);
+        transform: rotate(27deg);
+    }
+    .arrow-2 {
+        display: none;
+        top: -92px;
+        left: 559px;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        -webkit-transform: rotate(90deg);
+        transform: rotate(90deg);
+    }
+    .arrow-3 {
+        top: 400px;
+        left: 215px;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        -webkit-transform: rotate(125deg);
+        transform: rotate(125deg);
+    }
+    .arrow-4{
+        top: 450px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg);
+    }
+    .arrow-5 {
+        top: 400px;
+        left: -200px;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        -webkit-transform: rotate(225deg);
+        transform: rotate(225deg);
+    }
+    .arrow-6 {
+        display: none;
+    }
+    .arrow-7 {
+        top: -415px;
+        left: -139px;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        -webkit-transform: rotate(-27deg);
+        transform: rotate(-27deg);
     }
 }
