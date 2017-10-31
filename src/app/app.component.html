@@ -1,131 +1,116 @@
-<!-- <nav class="navbar" [ngClass]="{'moving': moving}">
-  
-      <div class="nav-brand">
-        <a routerLink="/home"  class="navbar-item">
-          <img [src]="logo" alt="Bulma logo">
-        </a>
-        <button class="button navbar-burger">
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
-    </div>
-     <div class="nav-center hide"> 
-                  <a routerLink="/about-us" routerLinkActive="active" class="nav-item is-tab is-hidden-mobile carousel-links">About Us</a>
-                  <a href="#" class="nav-item is-tab is-hidden-mobile carousel-links">Programs</a>
-                  <a href="#" class="nav-item is-tab is-hidden-mobile carousel-links">Get Involved</a>
-                  <a href="#" class="nav-item is-tab is-hidden-mobile carousel-links">Blog</a>
-                  <a href="#" class="nav-item is-tab is-hidden-mobile carousel-links">Contact Us</a>
-    </div> -->
-    
-    <!-- <div class="navbar-end donate">
-      <a href="#" id="donate">
-        <span>
-          Donate<fa name="heart"></fa>
-        </span>
-      </a>
-    </div> -->
-
-   
-    <!-- <span class="nav-toggle" ng-click="active = !active" ng-class="{'is-active':active}">
-        <span></span>
-        <span></span>
-        <span></span>
-      </span>
-      <div class="nav-right nav-menu not-visible animated fadeInDown" ng-class="{'is-active':active}">
-      <a href="#" class="nav-item is-tab is-hidden-desktop"  >About Us</a>
-        <a href="#" class="nav-item is-tab is-hidden-desktop"  >Programs</a>
-        <a href="#" class="nav-item is-tab is-hidden-desktop"  >Get Involved</a>
-        <a href="#" class="nav-item is-tab is-hidden-desktop"  >Blog</a>
-        <a href="#" class="nav-item is-tab is-hidden-desktop"  >Contact Us</a>
-
-      </div> -
-  
-  </nav> -->
-
-  <nav class="navbar nav-fixed-top" [ngClass]="{'moving': moving}">
-      <div class="navbar-brand">
-          <a routerLink="/home"  class="navbar-item">
-            <img [src]="logo" alt="Bulma logo">
+<nav class="navbar nav-fixed-top moving">
+  <div class="navbar-brand">
+    <a href="http://exploringtech.org/" class="navbar-item">
+            <img [src]="logo" alt="TXT logo">
           </a>
-    
 
-    
-        <div class="navbar-burger burger" data-target="navMenuTransparentExample" (click)="showMenu()" [ngClass]="{'is-active': menuActive}" >
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-      </div>
-    
-      <div id="navMenuTransparentExample" class="navbar-menu" [ngClass]="{'is-active': menuActive}">
 
-    
-        <div class="navbar-end">
 
-            <a class="navbar-item " [routerLink]="['/about-us']" routerLinkActive="is-active" (click)="closeMenu()">
-              About Us
+    <div class="navbar-burger burger" data-target="navMenuTransparentExample" (click)="showMenu()" [ngClass]="{'is-active': menuActive}">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+
+  <div id="navMenuTransparentExample" class="navbar-menu" [ngClass]="{'is-active': menuActive}">
+
+
+    <div class="navbar-end">
+
+      <a  pageScroll [pageScrollOffset]="60" href="#schedule" class="navbar-item" (click)="closeMenu()" [ngClass]="{'hidden': hidden}">
+              Schedule
+      </a>
+      <a  href="https://www.google.com/maps/dir//South+Park+Recreation+Center,+345+E+51st+St,+Los+Angeles,+CA+90011/@33.9965667,-118.2707946,17z/data=!4m15!1m6!3m5!1s0x80c2c843a84e9b51:0x31bdc7cc339f51da!2sSouth+Park+Recreation+Center!8m2!3d33.9965623!4d-118.2686059!4m7!1m0!1m5!1m1!1s0x80c2c843a84e9b51:0x31bdc7cc339f51da!2m2!1d-118.2686059!2d33.9965623" class="navbar-item "  (click)="closeMenu()"  [ngClass]="{'hidden': hidden}">
+            Directions
+      </a>
+
+      <a pageScroll  [pageScrollOffset]="60" href="#sponsers" class="navbar-item "  (click)="closeMenu()"  [ngClass]="{'hidden': hidden}">
+              Sponsors
+      </a>
+      <a  pageScroll [pageScrollOffset]="60" href="#tickets" class="navbar-item "  (click)="closeMenu()"  [ngClass]="{'hidden': hidden}">
+              Tickets
             </a>
-            <a class="navbar-item " href="#" [routerLink]="['/programs']" routerLinkActive="is-active" (click)="closeMenu()">
-              Programs
-            </a>
-  
-            <a class="navbar-item " [routerLink]="['/getInvolved']" routerLinkActive="is-active" (click)="closeMenu()">
-              Get Involved
-            </a>
-            <!-- <a class="navbar-item " href="http://bulma.io/love/">
-              Blog
-            </a> -->
-            <a class="navbar-item " href="http://bulma.io/expo/" [routerLink]="['/contact-us']" routerLinkActive="is-active" (click)="closeMenu()">
-              Contact us
-            </a>
-            <a href="https://txt.networkforgood.com/" target="_blank" class="donate" id="donate" (click)="closeMenu()">
+      <a href="https://txt.networkforgood.com/" target="_blank" class="donate" id="donate" (click)="closeMenu()">
                 <span>
                   Donate<fa name="heart"></fa>
                 </span>
-              </a>
-        </div>
-      </div>
-    </nav>
-
-
-  <router-outlet id="main-content"></router-outlet>
-
-  <div class="footer">
-    <div class="columns">
-      <div class="column summary">
-        <img src="assets/img/logo-white.png" alt="">
-        <p>We serve young men of color between the 7th and 11th grade who are from low income communities. Since 2009, we’ve used the concept of developing strong teams as a way for our young men to learn about collaboration, ideation, and long-lasting life skills. In small teams our youths learn the process of taking an idea from concept to market.</p>
-        <p><a href="#">http://exploringtech.org/</a></p>
-      </div>
-      <div class="column second">
-        <h1>OUR HACKER SPACE</h1>
-        <p>3655 South Grand Ave.</p>
-        <p>Los Angeles, CA 90007 Ste. 220</p>
-        <p>info@urbantxt.com</p>
-      </div>
-      <div class="column third">
-        <h1>SUBSCRIBE</h1>
-        <div class="field has-addons">
-            <div class="control">
-              <input class="input" type="text" placeholder="Email">
-            </div>
-            <div class="control">
-              <a class="button is-info">
-                Submit
-              </a>
-            </div>
-        </div>
-        <h1>CONNECT</h1>
-        <ul class="social-media">
-          <li><a href="#"><fa name="facebook"></fa></a></li>
-          <li><a href="#"><fa name="twitter"></fa></a></li>
-          <li><a href="#"><fa name="instagram"></fa></a></li>
-          <li><a href="#"><fa name="youtube"></fa></a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="copyright">
-      <p>© 2017 Teens Exploring Technology ALL RIGHTS RESERVED</p>
+      </a>
     </div>
   </div>
+</nav>
+
+
+<router-outlet id="main-content"></router-outlet>
+
+<div class="footer">
+  <div class="columns">
+    <div class="column summary">
+      <img src="assets/img/logo-white.png" alt="">
+      <p>We serve young men of color between the 7th and 11th grade who are from low income communities. Since 2009, we’ve used
+        the concept of developing strong teams as a way for our young men to learn about collaboration, ideation, and long-lasting
+        life skills. In small teams, our youths learn the process of taking an idea from concept to market.</p>
+      <p><a href="#">http://exploringtech.org/</a></p>
+    </div>
+    <div class="column second">
+      <h1>OUR HACKER SPACE</h1>
+      <p>3655 South Grand Ave.</p>
+      <p>Los Angeles, CA 90007 Ste. 220</p>
+      <p>info@urbantxt.com</p>
+    </div>
+    <div class="column third">
+      <h1>SUBSCRIBE</h1>
+      <div class="field has-addons">
+          <form (ngSubmit)="onSubmit(email)" #newsletterForm="ngForm" style="display:flex;">
+        <div class="control">
+            <input class="input" type="text" [ngClass]="{'input-error': input.email}" #email="ngModel" name="email" id="email" required email [(ngModel)]="model.email" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"
+            required>
+        </div>
+        <button class="button is-primary" [ngClass]="{'is-loading': submit}" [disabled]="!email.valid || submit">
+            Submit
+          </button>
+          <br>
+
+        <!-- <div class="control">
+            <input class="button is-success" type="submit" value="Subscribe" [disabled]="!email.valid">
+        </div> -->
+        </form>
+      </div>
+      <div class="notification is-primary" *ngIf='success'>
+          <button class="delete" (click)="exit()"></button>
+          Thank You. Your info has been submitted.
+      </div>
+      <div class="notification is-danger" *ngIf='failure'>
+          <button class="delete" (click)="exit()"></button>
+          Unable to submit form at this time. Please try Again. 
+          If problems persist please email <strong>roberto@urbantxt.com</strong>
+      </div>
+      <h1>CONNECT</h1>
+      <ul class="social-media">
+        <li>
+          <a href="#">
+            <fa name="facebook"></fa>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <fa name="twitter"></fa>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <fa name="instagram"></fa>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <fa name="youtube"></fa>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="copyright">
+    <p>© 2017 Teens Exploring Technology ALL RIGHTS RESERVED</p>
+  </div>
+</div>

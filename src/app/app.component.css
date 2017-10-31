@@ -6,14 +6,21 @@ Primary style
 html * {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    background-color: #ffffff;
   }
-  
+  body {
+    width: 100vw;
+    overflow-x: hidden;
+    background-color: #ffffff;
+}
   *, *:after, *:before {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
   }
-  
+  .hidden{
+      display: none;
+  }
   .logo-link{
       z-index: 9999;
   }
@@ -178,8 +185,8 @@ html * {
   }
   .social-media li{
       display: inline-block;
-      width: 35px;
-      height: 35px;
+      width: 40px;
+      height: 40px;
       text-align: center;
       background-color: #F5F5F5;
       border-radius: 15%;
@@ -187,8 +194,8 @@ html * {
   }
   .social-media li:hover{
     display: inline-block;
-    width: 35px;
-    height: 35px;
+    width: 40px;
+    height: 40px;
     text-align: center;
     background-color: #fff;
     border-radius: 15%;
@@ -283,6 +290,31 @@ html * {
     .navbar-end .is-active{
         color: #189EB3 !important;
     }
+
+    .button.is-primary{
+        background-color: #fff;
+        border-color: transparent;
+        color: #189EB3;
+    }
+    .button.is-primary:hover {
+        background-color: #189EB3;
+        border-color: #fff;
+        color: #fff;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media only screen and (max-width: 1023px) {
     .navbar-end .navbar-item{
         color:black;
@@ -310,6 +342,7 @@ html * {
        border: none;
     }
     .donate{
+        text-align: center;
         display: block;
         background-color: #fff;
         height:45px;
