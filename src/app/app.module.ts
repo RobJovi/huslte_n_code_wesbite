@@ -16,12 +16,17 @@ import { PhonePipePipe } from './phone-pipe.pipe';
 import { PreloadSelectedModulesList } from './config/preload_selected_modules_list';
 import {NgsRevealModule} from 'ng-scrollreveal';
 import {Ng2PageScrollModule} from 'ng2-page-scroll';
+import {CountDown} from "ng2-date-countdown";
+
+// Import your library
+import { SlickModule } from 'ngx-slick';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    PhonePipePipe
+    PhonePipePipe,
+    CountDown
 
   ],
   imports: [
@@ -31,6 +36,7 @@ import {Ng2PageScrollModule} from 'ng2-page-scroll';
     RoutingModule,
     FormsModule, 
     HttpClientModule,
+    SlickModule.forRoot(),
     NgsRevealModule.forRoot(),
     Ng2PageScrollModule
   ],

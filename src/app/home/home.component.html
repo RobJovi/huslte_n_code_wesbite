@@ -1,6 +1,7 @@
 <div class="main">
   <div class="banner white-preload" [ngClass]="{'banner-img': loaded}">
     <div class="title">
+      <img class="img" src="/assets/img/hackathon.jpg" alt="" id="img" #img>
       <div class="layer"></div>
       <div class="title-content">
         <div class="img-container">
@@ -8,6 +9,7 @@
           <h3 class="custom-font custom-color-white"> Watts Hackathon</h3>
         </div>
         <h1 class="custom-font uppercase custom-color-white">Hustle N' Code</h1>
+        <countdown [text]="text" units="Month | Days | Hours | Minutes | Seconds" end="December 09, 2017 09:00:00"></countdown>        
       </div>
     </div>
     <div class="icons">
@@ -17,7 +19,7 @@
             <div>
               <i class="fa fa-3x  fa-ticket color" aria-hidden="true"></i>
             </div>
-            <h1 class="color">Tickets</h1>
+            <h1 class="color">Registration</h1>
           </a>
         </li>
         <li>
@@ -38,7 +40,7 @@
           </a>
         </li>
         <li>
-          <a href="https://www.google.com/maps/dir//South+Park+Recreation+Center,+345+E+51st+St,+Los+Angeles,+CA+90011/@33.9965667,-118.2707946,17z/data=!4m15!1m6!3m5!1s0x80c2c843a84e9b51:0x31bdc7cc339f51da!2sSouth+Park+Recreation+Center!8m2!3d33.9965623!4d-118.2686059!4m7!1m0!1m5!1m1!1s0x80c2c843a84e9b51:0x31bdc7cc339f51da!2m2!1d-118.2686059!2d33.9965623">
+          <a href="https://www.google.com/maps/dir//11251+Compton+Ave,+Los+Angeles,+CA+90059/@33.9321303,-118.2485425,19z/data=!4m16!1m7!3m6!1s0x80c2cbce7628d5c7:0x9084fad7084b02b!2s11251+Compton+Ave,+Los+Angeles,+CA+90059!3b1!8m2!3d33.9321782!4d-118.2465845!4m7!1m0!1m5!1m1!1s0x80c2cbce7628d5c7:0x9084fad7084b02b!2m2!1d-118.2465845!2d33.9321782" target="_blank">
             <div>
               <i class=" color fa  fa-3x fa-map-marker" aria-hidden="true"></i>
             </div>
@@ -53,31 +55,41 @@
   <div class="padding">
     <div class="description" id="description">
       <h1>rise up for upward mobility</h1>
-      <p>Do you have a great idea for a website or app? Have you ever wondered how your favorite websites and apps work? Come
-        learn and let your ideas run wild at our 5th annual South LA Hustle N’ Code Hackathon! Win a laptop, Beats headphones
-        and more for your team’s brilliant idea. With great prizes, cool giveaways and great music, you don’t want to miss
-        this exciting event! Innovate with us to solve community problems using code and hack away to build web and mobile
-        apps. Your app could help improve your church, school, block, park, or any part of your community. All you have to
-        bring is a hungry mind that is willing to learn and work with others. No coding experience is required.</p>
+      <p class="font-size">How can we disrupt a system where one is born into poverty? How can we thrive and boost upward mobility? What role
+        can we play? Join us, come learn, and let your ideas run wild at our <b>5th annual Hustle N’ Code Hackathon!</b></p>
+      <p class="font-size">
+        The Hustle N’ Code Hackathon is open to all young minds ages 14-18. This event is designed to <b>inspire 100+ underserved students
+        from the Watts community</b> to come up with creative solutions which address community-based problems and strengthen
+        their community through introducing them to computer programming. We will achieve this mission by harnessing the
+        power of resource exposure and mentorship. The students will work with mentors during the Hackathon to learn to code
+        and develop solutions to these problems. <b>There will be cool tech prizes, t-shirts, breakfast, lunch, mentorship and
+        a great time provided!!</b>
+      </p>
+      <p class="font-size">
+        Make a difference and be a part of this unique education event by signing up to be a participant, volunteer, or mentor. Help
+        bring diversity to tech. <b>RISE UP FOR UPWARD MOBILITY</b> and take this opportunity to become the technology innovator
+        and leader of tomorrow!
+      </p>
     </div>
     <div class="columns key-list" [ngsRevealSet]="{ delay:200, easing: 'ease-in-out'}" [ngsInterval]="100" [ngsSelector]="'.item'">
       <div class="item column">
         <h1>
-          <a pageScroll [pageScrollOffset]="60" href="#tickets">tickets</a>
+          <a pageScroll [pageScrollOffset]="60" href="#tickets">Registration</a>
         </h1>
-        <p>Get your tickets on our Eventbrite page!</p>
+        <p class="font-size">Register on our
+          <br /> Eventbrite page!</p>
       </div>
       <div class="item column">
         <h1> date &amp; time</h1>
-        <p>Sat, December 3, 2016
-          <br /> 10:00 AM – 6:00 PM PST</p>
+        <p class="font-size">Sat, December 9, 2017
+          <br /> 9:00 AM – 6:00 PM PST</p>
       </div>
       <div class="item column">
         <h1>
-          <a href="https://www.google.com/maps/dir//South+Park+Recreation+Center,+345+E+51st+St,+Los+Angeles,+CA+90011/@33.9965667,-118.2707946,17z/data=!4m15!1m6!3m5!1s0x80c2c843a84e9b51:0x31bdc7cc339f51da!2sSouth+Park+Recreation+Center!8m2!3d33.9965623!4d-118.2686059!4m7!1m0!1m5!1m1!1s0x80c2c843a84e9b51:0x31bdc7cc339f51da!2m2!1d-118.2686059!2d33.9965623"
-            class="navbar-item "> Directions </a>
+          <a href="https://www.google.com/maps/dir//11251+Compton+Ave,+Los+Angeles,+CA+90059/@33.9321303,-118.2485425,19z/data=!4m16!1m7!3m6!1s0x80c2cbce7628d5c7:0x9084fad7084b02b!2s11251+Compton+Ave,+Los+Angeles,+CA+90059!3b1!8m2!3d33.9321782!4d-118.2465845!4m7!1m0!1m5!1m1!1s0x80c2cbce7628d5c7:0x9084fad7084b02b!2m2!1d-118.2465845!2d33.9321782" target="_blank"> 
+            Directions </a>
         </h1>
-        <p>Nickerson Recreation Center
+        <p class="font-size">Nickerson Recreation Center
           <br/> 11251 Compton Ave.
           <br /> Los Angeles, CA 90059
         </p>
@@ -86,71 +98,72 @@
     <div class="schedule" id="schedule">
       <h1>Hackathon schedule</h1>
       <h2>Saturday, Dec 9</h2>
-      <div class="schedule-list-details" [ngsRevealSet]="{ delay:200, easing: 'ease-in-out'}" [ngsInterval]="100" [ngsSelector]="'.list-item'">
+      <!-- <div class="schedule-list-details" [ngsRevealSet]="{ delay:200, easing: 'ease-in-out'}" [ngsInterval]="100" [ngsSelector]="'.list-item'">
         <div class="list-item item-1">
-          <div class="inline time-container">
+          <div class="inline time-container font-size">
             <p>
               <span class="time"> 9:00 am - 10:00 am</span>
             </p>
           </div>
-          <div class="inline desc-container">
+          <div class="inline desc-containe font-sizer">
             <p>
               <span class="desc"> Registration Begins. Meet your team</span>
             </p>
           </div>
         </div>
         <div class="list-item item-2">
-          <div class="inline time-container">
+          <div class="inline time-container font-size">
             <p>
               <span class="time"> 10:00 am - 12:00 pm</span>
             </p>
           </div>
-          <div class="inline desc-container">
+          <div class="inline desc-container font-size">
             <p>
               <span class="desc"> Hackathon begins</span>
             </p>
           </div>
         </div>
         <div class="list-item item-3">
-          <div class="inline time-container">
+          <div class="inline time-container font-size">
             <p>
               <span class="time"> 12:00 am - 1:00 pm</span>
             </p>
           </div>
-          <div class="inline desc-container">
+          <div class="inline desc-container font-size">
             <p>
               <span class="desc"> Lunch Break</span>
             </p>
           </div>
         </div>
         <div class="list-item item-4">
-          <div class="inline time-container">
+          <div class="inline time-container font-size">
             <p>
               <span class="time"> 1:00 am - 4:00 am</span>
             </p>
           </div>
-          <div class="inline desc-container">
+          <div class="inline desc-container font-size">
             <p>
               <span class="desc"> Hackathon resumes</span>
             </p>
           </div>
         </div>
         <div class="list-item item-1">
-          <div class="inline time-container">
+          <div class="inline time-container font-size">
             <p>
               <span class="time"> 4:00 pm - 6:00 pm</span>
             </p>
           </div>
-          <div class="inline desc-container">
+          <div class="inline desc-container font-size">
             <p>
               <span class="desc">Finalists demo and winners are chosen</span>
             </p>
           </div>
         </div>
-      </div>
+      </div> -->
+      <h1 style="color:black;margin-top:65px;font-size:1.5rem;">Schedule To Be Determined</h1>
     </div>
-    <div class="tickets" id="tickets">
-      <h1>tickets</h1>
+    <div class="tickets" id="tickets" style="margin-top: 25px;">
+      <h1 style="margin-bottom: 25px">registration</h1>
       <div class="register" id="register-volunteer">
         <div style="width:100%; text-align:left;" class="frame">
           <iframe src="https://eventbrite.com/tickets-external?eid=39415730511&ref=etckt" frameborder="0" height="275" width="100%"
@@ -159,10 +172,14 @@
       </div>
     </div>
   </div>
-  <div class="countdown">
-    <img src="assets/img/timer.png" alt="">
-  </div>
   <div class="padding">
+    <div class="slider">
+        <ngx-slick class="carousel" #slickModal="slick-modal" [config]="slideConfig" >
+            <div ngxSlickItem *ngFor="let slide of slides" class="slide">
+                  <img src="{{ slide.img }}" alt="" width="100%">
+            </div>
+        </ngx-slick>
+    </div>
     <div id="sponsers">
       <div class="header">
         <h1>Meet Our Sponsors</h1>
@@ -170,32 +187,28 @@
       </div>
       <div class="columns is-mobile is-multiline is-centered">
         <div class="column is-half-mobile">
-          <a href="https://www.gotinder.com/" target="_blank">
-            <img src="assets/sponsers/tinder.png" alt="">
+          <a href="http://home.hacla.org/" target="_blank">
+            <img src="assets/sponsers/hacla.jpg" alt="">
           </a>
         </div>
         <div class="column is-half-mobile">
-          <a href="https://www.snapchat.com/">
-            <img src="assets/sponsers/snapchat.png" alt="">
+          <a href="https://www.honda.com/community/applying-for-a-grant/" target="_blank">
+            <img src="assets/sponsers/honda.jpg" alt="">
           </a>
         </div>
         <div class="column is-half-mobile">
-          <a href="https://www.google.com/" target="_blank">
-            <img src="assets/sponsers/google.png" alt="">
+          <a href="https://www.usc.edu/" target="_blank">
+            <img src="assets/sponsers/usc.jpg" alt="">
           </a>
         </div>
         <div class="column is-half-mobile">
-          <a href="http://www.honda.com/">
-            <img src="assets/sponsers/honda.png" alt="">
+          <a href="http://www.la15th.com/" target="_blank">
+            <img src="assets/sponsers/la15-temp.png" alt="">
           </a>
         </div>
-        <div class="column is-half-mobile">
-          <a href="https://www.facebook.com/" target="_blank">
-            <img src="assets/sponsers/facebook2.png" alt="">
-          </a>
-        </div>
+
       </div>
-      <div class="columns is-centered is-multiline is-mobile">
+      <!---- <div class="columns is-centered is-multiline is-mobile">
         <div class="column is-half-mobile">
           <a href="http://www.nba.com/lakers/" target="_blank">
             <img src="assets/sponsers/lakers.png" alt="">
@@ -221,8 +234,8 @@
             <img src="assets/sponsers/shave.png" alt="">
           </a>
         </div>
-      </div>
-      <div class="columns is-centered is-multiline is-mobile">
+      </div> -->
+      <!-- <div class="columns is-centered is-multiline is-mobile">
         <div class="column is-2-desktop is-half-mobile">
           <a href="https://www.sce.com/wps/portal/home/!ut/p/b1/04_Sj9CPykssy0xPLMnMz0vMAfGjzOIt3Q1cPbz8DTzdQwKNDTyNAw38gh0djQ0MzIAKIoEKDHAARwNC-sP1o8BK8JjgpR-VnpOfBHZNpGNekrFFun5UUWpaalFqkV5pEVA4o6SkoNhK1UDVoLy8XC89Pz89J1UvOT9X1QCbloz84hL9CFSV-gW5EQa6UUmV5Y6KigATG3gA/dl4/d5/L2dBISEvZ0FBIS9nQSEh/"
             target="_blank">
@@ -234,7 +247,7 @@
             <img src="assets/sponsers/good.png" alt="">
           </a>
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
 </div>

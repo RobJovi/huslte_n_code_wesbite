@@ -102,7 +102,7 @@ export class AppComponent {
       "email" : data.model
     }
 
-    this.http.post('http://ec2-54-244-178-153.us-west-2.compute.amazonaws.com:3000/subscribe/saveSubscriber',payload).subscribe(
+    this.http.post('https://txt-server.herokuapp.com/subscribe/saveSubscriber',payload).subscribe(
       (data) => {
         this.checking = false;
         this.success = true;

@@ -1,3 +1,6 @@
+.font-size{
+    font-size: 1.2rem !important;
+}
 .custom-font{
     font-family: 'Varela', sans-serif !important;
 }
@@ -13,7 +16,42 @@
 .uppercase{
     text-transform: uppercase;
 }
-
+.img{
+    position: absolute;
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    object-fit: cover; /* Do not scale the image */
+    object-position: center; /* Center the image within the element */
+    width: 100vw;
+    height: 100vh;
+    max-height: none;
+    max-width: none;
+    z-index: -999999;
+    top: 0;
+    left: 0px;
+}
+.tint {
+    position: relative;
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    box-shadow: rgba(0,0,0,.2) 3px 5px 5px;
+  }
+  
+  .tint:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,255,255, 0.5);
+    transition: all .3s linear;
+  }
+  
 
 
 .banner{
@@ -45,7 +83,7 @@
     -webkit-animation-delay: 1s; /* Safari 4.0 - 8.0 */
     -webkit-animation-fill-mode: forwards;
     animation: fadeInTitle 2s ease-in-out 1;
-    animation-delay: 0.7s;
+    animation-delay: 1.2s;
     animation-fill-mode: forwards;
 }
 .img-container img{
@@ -61,14 +99,14 @@
 @keyframes fadeInTitle{
     from {
         opacity: 0;
-        top: 200px;
+        top: 100px;
     }
     to {
         opacity: 1;
-        top: 250px;
+        top: 150px;
     }
 }
-.white-preload{
+/* .white-preload{
     background: #fff url('/assets/img/preload.png') repeat center;
 }
 .banner-img{
@@ -77,14 +115,13 @@
     /* linear-gradient(
       rgba(20, 20, 20, 0.45), 
       rgba(20, 20, 20, 0.45)
-    ), */
-    /* your image */
+    ), 
     url('/assets/img/hackathon.jpg');
     background-position: center;
     background-repeat: repeat;
     background-size: cover;
     overflow: hidden; 
-}
+} */
 .img .main{
     background-color: #fff;
     width:100%;
@@ -114,7 +151,7 @@
     margin: 0 auto;
     z-index: 11;
     border-radius: 5px;
-    padding: 15px 50px 30px 50px;
+    padding: 15px 0 30px 0;
     background-color: #fff;
 }
 .icons ul{
@@ -129,7 +166,7 @@
     -webkit-animation-delay: 1s; /* Safari 4.0 - 8.0 */
     -webkit-animation-fill-mode: forwards;
     animation: fadeInTitle 2s ease-in-out 1;
-    animation-delay: 0.7s;
+    animation-delay: 1.2s;
     animation-fill-mode: forwards;
 }
 .icons ul li a {
@@ -172,7 +209,7 @@
     display: inline-block;
 }
 .description{
-    margin: 50px 0;
+    margin: 100px 0;
 }
 
 .description h1{
@@ -198,7 +235,7 @@
     text-transform: uppercase;
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     cursor: pointer;
 }
 .item h1{
@@ -206,7 +243,7 @@
     text-transform: uppercase;
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     cursor: pointer;
 }
 .item p{
@@ -237,7 +274,7 @@
     margin: 25px 0;
 }
 .schedule-list-details{
-    margin: 50px 0;
+    margin: 50px 0 200px 0;
 }
 .list-item .time{
     text-align: center;
@@ -309,12 +346,156 @@
     height: 500px;
 }
 .countdown{
-
+    position: relative;
 }
 .countdown img{
     width:100%;
 }
-@media only screen and (max-width: 769px) {
+.countdown-content{
+    position: absolute;
+    top:60px;
+    left:0;
+    right:0;
+    bottom:0;
+    margin: 0;
+    text-align: center
+}
+::ng-deep .countdown{
+    margin-top: 25px;
+}
+::ng-deep .countdown .measurements{
+    color:#fff;
+    font-size: 1.4rem;
+}
+.countdown .header-1{
+    text-align: center;
+    color:#fff;
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin: 40px 0;
+}
+.countdown .header-2{
+    text-align: center;
+    color:#fff;
+    font-size: 3rem;
+    font-weight: 600;
+    margin: 40px 0;
+
+}
+/* ::ng-deep .countdown .measurements:nth-child(1){
+    border-right: medium solid #fff !important;
+}
+::ng-deep .countdown .measurements:nth-child(2){
+    border-right: medium solid #fff !important;
+}
+::ng-deep .countdown .measurements:nth-child(3){
+    border-right: medium solid #fff !important;
+}
+
+::ng-deep .countdown .measurements:nth-child(4){
+    border-right: medium solid #fff !important;
+} */
+.rise-up{
+    color: #fff;
+    text-transform: CAPITALIZE;
+    margin-top: 15px;
+}
+
+.slider{
+    display: block;
+    margin: 50px auto;
+    width: 70%;
+    height: 500px;
+    overflow: hidden;
+}
+::ng-deep .carousel{
+    height: 100%;
+}
+::ng-deep .slick-list{
+    height: 90%;
+}
+::ng-deep .slick-track{
+    height: 100%;
+}
+::ng-deep .slick-dots{
+    bottom: 0 !important;
+}
+::ng-deep .slide img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Do not scale the image */
+    object-position: center; /* Center the image within the element */
+}
+
+@media only screen and (min-width: 1023px) {
+    .icons ul li {
+        margin: 0 60px;
+    }
+    .countdown-content{
+        position: absolute;
+        top:50px;
+        left:0;
+        right:0;
+        bottom:0;
+        margin: 0;
+        text-align: center
+    }
+}
+@media only screen and (min-width: 1557px) {
+    .icons ul li {
+        margin: 0 85px;
+    }
+}
+@media only screen and (max-width: 1349px){
+    .icons ul li {
+        margin: 0 20px;
+    }
+}
+@media only screen and (max-width: 1024px){
+    ::ng-deep .countdown{
+        padding: 0 25px;
+    }
+    ::ng-deep .countdown .measurements{
+        color:#fff;
+        font-size: 32px;
+        margin: 0;
+        flex: 1 0 auto !important;
+    }
+    .icons{
+        display: none;
+    }
+    .hide{
+        display:none !important;
+    }
+
+}
+@media only screen and (max-width: 1023px){
+    .icons{
+        display: none;
+    }
+    .hide{
+        display:none !important;
+    }
+
+}
+@media only screen and (max-width: 960px) {
+    .slider{
+        display: block;
+        margin: 50px auto;
+        width: 90%;
+        height: 500px;
+        overflow: hidden;
+    }
+    
+    ::ng-deep .countdown{
+        padding: 0 25px;
+    }
+    ::ng-deep .countdown .measurements{
+        color:#fff;
+        font-size: 24px;
+        margin: 0;
+        flex: 1 0 auto !important;
+    }
     #sponsers .columns .column {
         margin-top: 15px;
     }
@@ -324,8 +505,126 @@
     .inline{
         display: block;
     }
+    .item.column{
+        text-align: center;
+    }
+    .title-content{
+        position: absolute;
+        top:100px;
+        left:0;
+        width:100%;
+        height: 100%;
+        z-index: 11;
+        opacity: 0;
+        -webkit-animation: fadeIntitle 2s ease-in-out 1; /* Safari 4.0 - 8.0 */
+        -webkit-animation-delay: 1s; /* Safari 4.0 - 8.0 */
+        -webkit-animation-fill-mode: forwards;
+        animation: fadeInTitle 2s ease-in-out 1;
+        animation-delay: 1.2s;
+        animation-fill-mode: forwards;
+    }
+    .img-container img{
+        width: 250px;
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .img-container h3{
+        font-weight: 600;
+        display: inline-block;
+        vertical-align: middle;
+    }
+    @keyframes fadeInTitle{
+        from {
+            opacity: 0;
+            top: 100px;
+        }
+        to {
+            opacity: 1;
+            top: 150px;
+        }
+    }
+}
+@media only screen and (max-width: 769px) {
+    ::ng-deep .countdown{
+        padding: 0 25px;
+    }
+    ::ng-deep .countdown .measurements{
+        color:#fff;
+        font-size: 24px;
+        margin: 0;
+        flex: 1 0 auto !important;
+    }
+    #sponsers .columns .column {
+        margin-top: 15px;
+    }
+    .padding{
+        padding: 0 25px;
+    }
+    .inline{
+        display: block;
+    }
+    .item.column{
+        text-align: center;
+    }
 }
 @media only screen and (max-width: 414px) {
+    ::ng-deep .countdown{
+        padding: 0 25px;
+    }
+    ::ng-deep .countdown .measurements{
+        color:#fff;
+        font-size: 16px;
+        margin: 0;
+        flex: 1 0 auto !important;
+    }
+    .rise-up{
+        color: #fff;
+        text-transform: CAPITALIZE;
+        margin-top: 15px;
+        font-size:1rem;
+    }
+    .countdown-content{
+        position: absolute;
+        top:20px;
+        left:0;
+        right:0;
+        bottom:0;
+        margin: 0;
+        text-align: center
+    }
+    .countdown countdown{
+        width:100%;
+        color: #fff;
+        font-size: 1rem;
+        text-align: center;
+    
+    }
+    .countdown .header-1{
+        text-align: center;
+        color:#fff;
+        font-size: 1.3rem;
+        font-weight: 600;
+        margin: 40px 0;
+    }
+    .countdown .header-2{
+        text-align: center;
+        color:#fff;
+        font-size: 1.3rem;
+        font-weight: 600;
+        margin: 40px 0;
+    
+    }
+    .countdown img{
+        width:auto;
+        max-width: inherit;
+        height: 325px;
+    }
+    .item.column{
+        text-align: center;
+    }
+    .font-size{
+        font-size: 1rem !important;
+    }
     #sponsers .columns {
         margin-top: 15px;
         padding: 0px 25px 30px 25px;

@@ -316,6 +316,9 @@ html * {
 
 
 @media only screen and (max-width: 1023px) {
+    .hidden{
+        display: inherit;
+    }
     .navbar-end .navbar-item{
         color:black;
         font-family: BlinkMacSystemFont,-apple-system,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
